@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+import os, sys
+
+# make sure style.css is always found, no matter who exec’s us
+script_dir = os.path.dirname(os.path.realpath(__file__))
+os.chdir(script_dir)
 
 import gi
 gi.require_version('Gtk', '3.0')
